@@ -1,0 +1,63 @@
+/* Reset browser defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121018;
+    color: white;
+}
+
+/* Layout container */
+.app-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background-color: #1e1b2e;
+    padding: 20px;
+}
+
+.logo {
+    color: #a855f7;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.sidebar li:hover {
+    background-color: #2d2545;
+}
+
+/* Main content */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+/* Hide sections by default */
+.section {
+    display: none;
+}
+
+/* Show active section */
+.section.active {
+    display: block;
+}
