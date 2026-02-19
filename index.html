@@ -34,6 +34,23 @@
 
             <section id="tasks" class="section">
                 <h2>Tasks</h2>
+
+                <!-- Task Form -->
+                <div class="task-form">
+                    <input type="text" id="taskTitle" placeholder="Task title">
+                    <input type="date" id="taskDate">
+                    <select id="taskPriority">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                    <button id="addTaskBtn">Add Task</button>
+                </div>
+
+                <!-- Task Cards Container -->
+                <div class="task-container" id="taskContainer">
+                    <!-- Task cards will appear here -->
+                </div>
             </section>
 
             <section id="notes" class="section">
