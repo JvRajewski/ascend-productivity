@@ -1,3 +1,71 @@
+/* === Dark Mode Backgrounds & Text === */
+body {
+    background-color: #1e1e2f;  /* dark background */
+    color: #e0e0e0;             /* light text */
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.sidebar {
+    background-color: #2c2c3e;  /* dark sidebar */
+}
+
+.section {
+    background-color: #27273c;  /* slightly lighter for content */
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* === Task Card Styling === */
+.task-card {
+    background-color: #2a2a3d;  /* card background */
+    border-left: 5px solid #6b5b95; /* purple accent by default */
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.task-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+}
+
+/* Completed Task Styling */
+.task-card.completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+/* Buttons inside task card */
+.task-buttons button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.complete-btn {
+    background-color: #22c55e; /* green */
+    color: white;
+}
+
+.complete-btn:hover {
+    background-color: #16a34a;
+}
+
+.delete-btn {
+    background-color: #ef4444; /* red */
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #b91c1c;
+}
+
 /* Reset browser defaults */
 * {
     margin: 0;
@@ -131,4 +199,92 @@ body {
 
 .high {
     border-left: 5px solid #ef4444;
+}
+
+.task-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.complete-btn {
+    background-color: #22c55e;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #ef4444;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Completed State */
+.completed {
+    opacity: 0.6;
+}
+
+.completed .task-title {
+    text-decoration: line-through;
+}
+
+.category-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    color: white;
+    margin-bottom: 5px;
+}
+
+/* Category Colors */
+.category-general {
+    background-color: #6b5b95; /* purple */
+}
+
+.category-work {
+    background-color: #22c55e; /* green */
+}
+
+.category-school {
+    background-color: #3b82f6; /* blue */
+}
+
+.category-personal {
+    background-color: #f59e0b; /* amber */
+}
+
+.category-notes {
+    background-color: #ec4899; /* pink */
+}
+
+.category-tabs {
+    margin-bottom: 15px;
+}
+
+.category-tabs .filter-btn {
+    background-color: #2a2a3d; /* dark tab */
+    color: #e0e0e0;
+    border: none;
+    padding: 6px 12px;
+    margin-right: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.category-tabs .filter-btn:hover {
+    background-color: #3b3b55;
+}
+
+.category-tabs .filter-btn.active {
+    background-color: #6b5b95; /* purple accent for active */
+    color: white;
 }
