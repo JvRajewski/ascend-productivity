@@ -34,11 +34,21 @@ addTaskBtn.addEventListener("click", () => {
     taskCard.classList.add("task-card", priority);
 
     taskCard.innerHTML = `
-        <h3>${title}</h3>
-        <p>Due: ${date || "No date"}</p>
+    <h3 class="task-title">${title}</h3>
+    <p>Due: ${date || "No date"}</p>
+    <div class="task-buttons">
+        <button class="complete-btn">Complete</button>
         <button class="delete-btn">Delete</button>
+    </div>
     `;
 
+    const completeBtn = taskCard.querySelector(".complete-btn");
+    const taskTitle = taskCard.querySelector(".task-title");
+
+    completeBtn.addEventListener("click", () => {
+        taskCard.classList.toggle("completed");
+    });
+    
     taskContainer.appendChild(taskCard);
 
     taskCard.querySelector(".delete-btn").addEventListener("click", () => {
